@@ -5,6 +5,7 @@ desc=Python-Prime_Number_Operations
 public=true
 homepage=
 license=mit
+remote=
 
 file.readme=.\README.md
 file.gitignore=.\.gitignore
