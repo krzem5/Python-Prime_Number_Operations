@@ -23,16 +23,13 @@ def prime_factors(num):
         for i in range(len(l)):
             if l[i] in last_itm:last_itm.append(l[i])
             else:
-                try:
-                    if len(last_itm)>1:end.append('%s^%s'%(last_itm[0],len(last_itm)))
-                    else:end.append('%s'%(last_itm[0]))
-                except:
-                    pass
+                if len(last_itm)>1:end.append('%s^%s'%(last_itm[0],len(last_itm)))
+                else:end.append('%s'%(last_itm[0]))
                 last_itm=[l[i]]
         if len(last_itm)>1:end.append('%s^%s'%(last_itm[0],len(last_itm)))
         else:end.append('%s'%(last_itm[0]))
         return end
-            
+
     div,divs,calc=prime_range((num//2)+1),[],[]
     while True:
         if is_prime(num):
@@ -76,7 +73,7 @@ def BCD(n,m):
         n,m=m,r
         r,q=(n%m),(n//m)
         if r==0:return m
-        
+
 if __name__=='__main__':
     while True:
         inp=input('>>>')
